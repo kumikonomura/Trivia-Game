@@ -1,0 +1,40 @@
+html, body{
+    height:100%;
+  }
+  /* Need to put in a background image */
+  
+  #wrapper{
+    margin:2.5% auto;
+    background-color: rgba(252, 234, 40, 0.83);
+    width:960px;
+    height: 95%;
+    box-sizing: border-box;
+  }
+  /* Title of the Game */
+  h1 {
+      text-align: center;
+      font-weight: bold;
+      color: blue;
+      padding-top: 3%;
+      font-size: 80px;
+  }
+  button{
+    display:block;
+    width:50%;
+    height:20%;
+    margin: 0 auto;
+    border:none;
+    cursor: pointer;
+    font-size: 42px;;
+  }
+  
+  #start{
+    margin-top: 10%;
+    border:2px solid blue;
+    background: pink;
+  }
+  
+  button:hover {
+    border:2px solid blue;
+    background: pink;
+  }
