@@ -31,27 +31,19 @@ html,body{
     font-size: 42px;;
   }
   
-  img{
+  /* img{
     height:200px;
-  }
+  } */
   
   h1{
     font-family: 'Aclonica', sans-serif;
-    font-size: 6.5em;
+    font-size: 4.5em;
     font-weight: bold;
     color:blue;
     padding-top: 2.5%;
   }
-  
-  #start{
-    margin-top: 10%;
-    border:2px solid blue;
-    background: pink;
-  }
-  
-  
-  
+
   button:hover {
     border:2px solid blue;
-    background: pink;
+    background: red;
   }

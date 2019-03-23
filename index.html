@@ -15,7 +15,6 @@
 <body>
     <!-- Title -->
     <h1>Trivia Game: Marvel Edition</h1>
-    <button onclick id="start">Start Game</button>
     <!-- Time Counter  -->
     <div id="timer"></div>
     <!-- Game Section -->
@@ -25,12 +24,13 @@
         <p id="current-question"></p>
         <!-- Choices -->
         <div id="answers">
-            <div class="answer" id="A" onclick="checkAnswer('A')">A</div>
-            <div class="answer" id="B" onclick="checkAnswer('B')">B</div>
-            <div class="answer" id="C" onclick="checkAnswer('C')">C</div>
-            <div class="answer" id="D" onclick="checkAnswer('D')">D</div>
+            <div class="answer" id="A" onclick="checkAnswer('a')">A</div>
+            <div class="answer" id="B" onclick="checkAnswer('b')">B</div>
+            <div class="answer" id="C" onclick="checkAnswer('c')">C</div>
+            <div class="answer" id="D" onclick="checkAnswer('d')">D</div>
         </div>
-        <!-- Submit Button -->
+        <!-- Start and Submit Button -->
+        <button onclick id="start">Start Game</button>
         <button onclick id="submit">Submit</button>
         <!-- Results -->
         <div id="results"></div>

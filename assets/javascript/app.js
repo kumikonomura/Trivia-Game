@@ -3,42 +3,9 @@ let correctAnswers =0
 let wrongAnswers = 0
 let notAnswered = 0
 
-// When the Start button is clicked
-const start = document.getElementById("start");
-
-const question = document.getElementById("question");
-
-const timer = document.getElementById("timer");
-
-const answerA = document.getElementById("A");
-const answerB = document.getElementById("B");
-const answerC = document.getElementById("C");
-const answerD = document.getElementById("D");
-
-// function to build the game
-function game () {}
-
-// function that will show the results when the submit button is clicked
-function showResults() {}
-
-// will display the game
-game();
-
-// When the submit button is clicked, will show results
-// submitButton.addEventListener('click', showResults);
 
 
-
-
-// sets index position of last question in the game (A,B,C,D)
-// let lastQuestionIndex = questions.length - 1
-
-// Variable for the current question
-let currentQuestion = 0
-
-
-
-
+// Questions
 let questions = [{
     question: `In the 2012 movie, The Avengers features Captain America. What is his real name?`,
     answers: {
@@ -51,7 +18,7 @@ let questions = [{
   }, {
     question: `Who is the leader of S.H.I.E.L.D?`,
     answers: {
-        a:   "Nick Fury", 
+        a: "Nick Fury", 
         b: "Tony Stark", 
         c: "Bruce Banner",
         d: "Diana Prince",
@@ -69,7 +36,7 @@ let questions = [{
   }, {
     question: `Who is Loki's adoptive brother?`,
     answers: {
-        a:  "Thor",
+        a: "Thor",
         b: "Tony Stark", 
         c: "Peter Parker", 
         d: "Bruce Wayne",
@@ -121,19 +88,28 @@ let questions = [{
 // <!-- ] -->
 
 // <!-- {questionId, isCorrect} -->
+
+// function to display question
+// question tracker
 let qTracker = 0
 function renderQuestion (index) {
     let currentQuestionElement = document.getElementById('current-question')
     currentQuestionElement.innerHTML = questions[index].question 
 }
 
+
+// declares a function (it's only declaring itself, not running itself)
 function nextQuestion () {
+    // checks if qTracker is 0, Is it? Yes it is
     if (qTracker === 0) {
+        // invokes renderQuestion function, passing in qTracker value in as a parameter
         renderQuestion(qTracker)
         renderChoices(qTracker)
+        qTracker = 1
     } else {
-        renderQuestion(qTracker++)
-        renderChoices(qTracker++)
+        qTracker +=1
+        renderQuestion(qTracker)
+        renderChoices(qTracker)
     }
 }
 
@@ -155,6 +131,23 @@ function renderChoices (index) {
 }
 
 let answers = document.getElementsByClassName('answer')
+
+document.getElementById('start').addEventListener('click', ()=> {
+    // console.log('hello')
+    nextQuestion()
+})
+
+function checkAnswer(option) {
+    const qTrackerOffset = qTracker - 1
+    const userChoice = questions[qTrackerOffset].answers[option]
+    const correctAnswer = questions[qTrackerOffset].correctAnswer
+    console.log(userChoice)
+    console.log(correctAnswer)
+    // console.log(option)
+}
+
+// Comparison If and Else 
+
 
 
 // <!-- render choices (data-value = true or false) -->
